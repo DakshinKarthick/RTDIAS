@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQNow - Alerts & Notifications</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="brand">
+            <i class='bx bxs-shield-alt-2'></i>
+            <span>ResQNow</span>
+        </div>
+        <ul>
+            <li><a href="/dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="/map"><i class='bx bxs-map'></i>Disaster Map</a></li>
+            <li><a href="/alerts" class="active"><i class='bx bxs-bell'></i>Alerts</a></li>
+            <li><a href="#reports"><i class='bx bxs-report'></i>Reports</a></li>
+            <li><a href="#profile"><i class='bx bxs-user'></i>Profile</a></li>
+        </ul>
+    </nav>
+    
+    <main class="dashboard-content">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>Alerts & Notifications</h1>
+                <p>Stay updated with real-time disaster alerts</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-wrapper">
+                    <button class="alert-btn">
+                        <i class='bx bxs-bell'></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pinimg.com/736x/4f/f2/12/4ff212e3663aed22f04238c8ca74ccfc.jpg" alt="Profile">
+                    <span>Dakshin</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="alerts-container">
+            <div class="alerts-filters">
+                <div class="filter-group">
+                    <label><i class='bx bx-filter-alt'></i>Filter Alerts</label>
+                    <select class="filter-select">
+                        <option value="all">All Types</option>
+                        <option value="earthquake">Earthquake</option>
+                        <option value="flood">Flood</option>
+                        <option value="wildfire">Wildfire</option>
+                        <option value="hurricane">Hurricane</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option value="all">All Locations</option>
+                        <option value="asia">Asia</option>
+                        <option value="europe">Europe</option>
+                        <option value="americas">Americas</option>
+                        <option value="africa">Africa</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option value="all">All Severity</option>
+                        <option value="critical">Critical</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+
+                <button class="clear-filters">Clear Filters</button>
+            </div>
+
+            <div class="alerts-list">
+                <div class="alert-item unread critical">
+                    <div class="alert-header">
+                        <span class="alert-type"><i class='bx bxs-error'></i>Earthquake</span>
+                        <span class="alert-time">2 minutes ago</span>
+                    </div>
+                    <h3>7.2 Magnitude Earthquake in Japan</h3>
+                    <p>Strong earthquake detected in coastal region. Tsunami warning issued.</p>
+                    <div class="alert-footer">
+                        <span class="alert-location"><i class='bx bxs-map'></i>Tokyo, Japan</span>
+                        <div class="alert-actions">
+                            <button class="mark-read"><i class='bx bx-check'></i>Mark as Read</button>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-item unread high">
+                    <div class="alert-header">
+                        <span class="alert-type"><i class='bx bxs-flame'></i>Wildfire</span>
+                        <span class="alert-time">15 minutes ago</span>
+                    </div>
+                    <h3>Expanding Wildfire in California</h3>
+                    <p>Rapid spread reported in northern regions. Evacuation orders in effect.</p>
+                    <div class="alert-footer">
+                        <span class="alert-location"><i class='bx bxs-map'></i>Northern California, USA</span>
+                        <div class="alert-actions">
+                            <button class="mark-read"><i class='bx bx-check'></i>Mark as Read</button>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-item medium">
+                    <div class="alert-header">
+                        <span class="alert-type"><i class='bx bxs-droplet'></i>Flood</span>
+                        <span class="alert-time">1 hour ago</span>
+                    </div>
+                    <h3>Severe Flooding in Jakarta</h3>
+                    <p>Heavy rainfall causing widespread flooding in metropolitan area.</p>
+                    <div class="alert-footer">
+                        <span class="alert-location"><i class='bx bxs-map'></i>Jakarta, Indonesia</span>
+                        <div class="alert-actions">
+                            <button class="mark-read"><i class='bx bx-check'></i>Mark as Read</button>
+                            <button class="view-details">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="alerts.js"></script>
+</body>
+</html>

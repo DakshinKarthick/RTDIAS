@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQNow - Reports & Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="brand">
+            <i class='bx bxs-shield-alt-2'></i>
+            <span>ResQNow</span>
+        </div>
+        <ul>
+            <li><a href="/dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="/map"><i class='bx bxs-map'></i>Disaster Map</a></li>
+            <li><a href="/alerts"><i class='bx bxs-bell'></i>Alerts</a></li>
+            <li><a href="/reports" class="active"><i class='bx bxs-report'></i>Reports</a></li>
+            <li><a href="#profile"><i class='bx bxs-user'></i>Profile</a></li>
+        </ul>
+    </nav>
+    
+    <main class="dashboard-content">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>Reports & Analysis</h1>
+                <p>Generate insights and analyze disaster trends</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-wrapper">
+                    <button class="alert-btn">
+                        <i class='bx bxs-bell'></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pinimg.com/736x/4f/f2/12/4ff212e3663aed22f04238c8ca74ccfc.jpg" alt="Profile">
+                    <span>Dakshin</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="reports-container">
+            <div class="reports-controls">
+                <div class="date-range">
+                    <div class="control-group">
+                        <label><i class='bx bx-calendar'></i>From:</label>
+                        <input type="date" class="date-input" id="date-from">
+                    </div>
+                    <div class="control-group">
+                        <label><i class='bx bx-calendar'></i>To:</label>
+                        <input type="date" class="date-input" id="date-to">
+                    </div>
+                    <button class="apply-btn"><i class='bx bx-check'></i>Apply Range</button>
+                </div>
+                
+                <div class="export-controls">
+                    <button class="export-btn pdf">
+                        <i class='bx bxs-file-pdf'></i>Export PDF
+                    </button>
+                    <button class="export-btn csv">
+                        <i class='bx bxs-file-csv'></i>Export CSV
+                    </button>
+                </div>
+            </div>
+
+            <div class="reports-grid">
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3><i class='bx bxs-bar-chart-alt-2'></i>Disaster Frequency</h3>
+                        <select class="chart-timeframe">
+                            <option value="monthly">Monthly</option>
+                            <option value="quarterly">Quarterly</option>
+                            <option value="yearly">Yearly</option>
+                        </select>
+                    </div>
+                    <canvas id="frequencyChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <div class="card-header">
+                        <h3><i class='bx bxs-map-alt'></i>Affected Areas</h3>
+                        <select class="chart-region">
+                            <option value="global">Global</option>
+                            <option value="asia">Asia</option>
+                            <option value="americas">Americas</option>
+                            <option value="europe">Europe</option>
+                        </select>
+                    </div>
+                    <canvas id="areasChart"></canvas>
+                </div>
+
+                <div class="chart-card full-width">
+                    <div class="card-header">
+                        <h3><i class='bx bx-line-chart'></i>Predictive Analysis</h3>
+                        <div class="ai-status">
+                            <span class="status-dot"></span>
+                            AI Forecast Active
+                        </div>
+                    </div>
+                    <div class="prediction-content">
+                        <div class="prediction-chart">
+                            <canvas id="predictionChart"></canvas>
+                        </div>
+                        <div class="prediction-insights">
+                            <h4>Risk Assessment</h4>
+                            <div class="risk-indicators">
+                                <div class="risk-item high">
+                                    <span class="risk-label">High Risk Areas</span>
+                                    <span class="risk-value">3 Regions</span>
+                                </div>
+                                <div class="risk-item medium">
+                                    <span class="risk-label">Medium Risk</span>
+                                    <span class="risk-value">5 Regions</span>
+                                </div>
+                                <div class="risk-item low">
+                                    <span class="risk-label">Low Risk</span>
+                                    <span class="risk-value">12 Regions</span>
+                                </div>
+                            </div>
+                            <div class="ai-recommendations">
+                                <h4>AI Recommendations</h4>
+                                <ul>
+                                    <li>Increase monitoring in coastal regions</li>
+                                    <li>Update emergency response protocols</li>
+                                    <li>Review resource allocation strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="reports.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQNow - User Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="profile-background">
+        <div class="background-pattern"></div>
+    </div>
+
+    <nav class="sidebar">
+        <div class="brand">
+            <i class='bx bxs-shield-alt-2'></i>
+            <span>ResQNow</span>
+        </div>
+        <ul>
+            <li><a href="/dashboard"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="/map"><i class='bx bxs-map'></i>Disaster Map</a></li>
+            <li><a href="/alerts"><i class='bx bxs-bell'></i>Alerts</a></li>
+            <li><a href="/reports"><i class='bx bxs-report'></i>Reports</a></li>
+            <li><a href="/profile" class="active"><i class='bx bxs-user'></i>Profile</a></li>
+        </ul>
+    </nav>
+    
+    <main class="dashboard-content">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1>User Profile</h1>
+                <p>Manage your account settings and preferences</p>
+            </div>
+            <div class="header-right">
+                <div class="notification-wrapper">
+                    <button class="alert-btn">
+                        <i class='bx bxs-bell'></i>
+                        <span class="notification-badge"></span>
+                    </button>
+                </div>
+                <div class="user-profile">
+                    <img src="https://i.pinimg.com/736x/4f/f2/12/4ff212e3663aed22f04238c8ca74ccfc.jpg" alt="Profile">
+                    <span>Dakshin</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <div class="profile-image-wrapper">
+                        <div class="profile-image-container">
+                            <img src="https://i.pinimg.com/736x/4f/f2/12/4ff212e3663aed22f04238c8ca74ccfc.jpg" alt="Profile Picture">
+                            <div class="profile-image-overlay">
+                                <button class="change-photo-btn">
+                                    <i class='bx bxs-camera'></i>
+                                    <span>Change Photo</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="profile-status online">
+                            <span class="status-dot"></span>
+                            Online
+                        </div>
+                    </div>
+                    <div class="profile-details">
+                        <div class="profile-name-badge">
+                            <h2>Dakshin</h2>
+                            <span class="verified-badge" title="Verified Account">
+                                <i class='bx bxs-badge-check'></i>
+                            </span>
+                        </div>
+                        <p class="role"><i class='bx bxs-shield-alt-2'></i>Emergency Response Coordinator</p>
+                        <p class="email"><i class='bx bxs-envelope'></i>dakshin@resqnow.com</p>
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">127</span>
+                                <span class="stat-label">Alerts Handled</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">Response Rate</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">2 Years</span>
+                                <span class="stat-label">Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="edit-profile-btn pulse-animation">
+                    <i class='bx bxs-edit'></i>Edit Profile
+                </button>
+            </div>
+
+            <div class="achievements-section">
+                <h3><i class='bx bxs-trophy'></i>Achievements</h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <h4>First Response</h4>
+                        <p>Quick response to emergency situation</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class='bx bxs-medal'></i>
+                        </div>
+                        <h4>Team Leader</h4>
+                        <p>Led 50+ successful operations</p>
+                    </div>
+                    <div class="achievement-card">
+                        <div class="achievement-icon">
+                            <i class='bx bxs-certification'></i>
+                        </div>
+                        <h4>Certified Expert</h4>
+                        <p>Advanced disaster management</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-sections">
+                <div class="profile-section">
+                    <h3><i class='bx bxs-bell'></i>Notification Preferences</h3>
+                    <div class="preferences-list">
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <h4>Email Notifications</h4>
+                                <p>Receive alerts via email</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <h4>Push Notifications</h4>
+                                <p>Browser notifications for alerts</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="preference-item">
+                            <div class="preference-info">
+                                <h4>SMS Alerts</h4>
+                                <p>Get critical alerts via SMS</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-section">
+                    <h3><i class='bx bxs-shield'></i>Account Security</h3>
+                    <div class="security-options">
+                        <button class="security-btn">
+                            <i class='bx bxs-key'></i>Change Password
+                        </button>
+                        <button class="security-btn">
+                            <i class='bx bxs-devices'></i>Connected Devices
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-footer">
+                <button class="logout-btn">
+                    <i class='bx bx-log-out'></i>Logout
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="profile.js"></script>
+</body>
+</html>
